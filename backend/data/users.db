@@ -1,0 +1,14 @@
+{"login":"zht","firstname":"Bridget","lastname":"O Mahony","passwordHash":"6a32629185f922691a9b52ab60254cd5b78b88fc80750ce5c69c61227b0de7cb","accountNr":"1000007","_id":"1WpGEqtopd6fD1wy"}
+{"login":"user1","firstname":"Bob","lastname":"Müller","passwordHash":"879e0a6c3793565633ce410c15da9c6d0ab417dd627274e1e28e577a3f247ef6","accountNr":"1000001","_id":"NSx1Lrp2DLWZ7oqQ"}
+{"login":"Kaan88888","firstname":"The","lastname":"BurgerKiller","passwordHash":"e6785679f07b5eff31de0a103aa04e618a48d7faedc20f9345058c3a48f625fa","accountNr":"1000005","_id":"QfwaqKbyT6gJh82d"}
+{"login":"user2","firstname":"Lisa","lastname":"Meier","passwordHash":"879e0a6c3793565633ce410c15da9c6d0ab417dd627274e1e28e577a3f247ef6","accountNr":"1000002","_id":"SN0MS5NHRf7mNAFr"}
+{"login":"the","firstname":"Kaan","lastname":"Kayali","passwordHash":"6a32629185f922691a9b52ab60254cd5b78b88fc80750ce5c69c61227b0de7cb","accountNr":"1000010","_id":"YIXtwXHvKMdijXD0"}
+{"login":"kaan.kayali","firstname":"Kaan","lastname":"Kayali","passwordHash":"6a32629185f922691a9b52ab60254cd5b78b88fc80750ce5c69c61227b0de7cb","accountNr":"1000004","_id":"k5i4ciC4mOIqkK7c"}
+{"login":"esse","firstname":"Bridget","lastname":"O Mahony","passwordHash":"6a32629185f922691a9b52ab60254cd5b78b88fc80750ce5c69c61227b0de7cb","accountNr":"1000009","_id":"nHJ0nrGNoDUn9iU8"}
+{"login":"user3","firstname":"Kevin","lastname":"Schmidt","passwordHash":"879e0a6c3793565633ce410c15da9c6d0ab417dd627274e1e28e577a3f247ef6","accountNr":"1000003","_id":"nWDRy8yTnku7bKjA"}
+{"login":"Kaan8888","firstname":"Bridget","lastname":"O Mahony","passwordHash":"6a32629185f922691a9b52ab60254cd5b78b88fc80750ce5c69c61227b0de7cb","accountNr":"1000013","_id":"pSF43B9YxlLoLVXx"}
+{"login":"aproz","firstname":"Bridget","lastname":"O Mahony","passwordHash":"6a32629185f922691a9b52ab60254cd5b78b88fc80750ce5c69c61227b0de7cb","accountNr":"1000008","_id":"rnkpmQgfqN2ATS8A"}
+{"$$indexCreated":{"fieldName":"login","unique":true,"sparse":true}}
+{"$$indexCreated":{"fieldName":"accountNr","unique":true,"sparse":true}}
+{"login":"esse2","firstname":"Cork","lastname":"airport","passwordHash":"6a32629185f922691a9b52ab60254cd5b78b88fc80750ce5c69c61227b0de7cb","accountNr":"1000011","_id":"n7xySsmogG0UdDev"}
+{"login":"esser","firstname":"esse","lastname":"esse","passwordHash":"6a32629185f922691a9b52ab60254cd5b78b88fc80750ce5c69c61227b0de7cb","accountNr":"1000014","_id":"1UKqXxRbINWFlJbO"}

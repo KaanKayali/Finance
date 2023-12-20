@@ -1,0 +1,51 @@
+<header>
+    <div>
+        <img src="https://glkb.ch/o/glkb-theme/images/logo.svg" height="75" alt="">
+    </div>
+    <div>
+      <button routerLink="/" class="btn btn-danger">Login</button>
+    </div>
+</header><br>
+<div class="container">
+    <h2>{{title}}</h2>
+    <form #registerForm="ngForm" (ngSubmit)="Register(registerForm)" class="container mt-5"> <!--onSubmit(userForm.value)-->
+        <div class="form-group">
+            <label for="firstname">Firstname:</label>
+            <input type="text" name="firstname" id="firstname" class="form-control" required ngModel #firstname="ngModel" placeholder="Damjan">
+            <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)" class="text-danger">
+                Please specify your first name.
+            </div>
+
+            <label for="lastname">Lastname:</label>
+            <input type="text" name="lastname" id="lastname" class="form-control" required ngModel #lastname="ngModel" placeholder="Zivcovic">
+            <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="text-danger">
+                Please specify your last name.
+            </div>
+
+            <label for="username">User name:</label>
+            <input type="text" minlength="3" name="username" id="username" class="form-control" required ngModel #username="ngModel" placeholder="Esse">
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+                Please specify your login, at least 3 characters.
+            </div>
+
+            <label for="password">Password:</label>
+            <input type="password" minlength="3" name="password" id="password" class="form-control" required ngModel #password="ngModel">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)"  class="text-danger">
+                Please specify your password, at least 3 characters.
+            </div>
+            
+            <label for="confirmpassword">Confirm password:</label>
+            <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" required ngModel #confirmpassword="ngModel">
+            <div *ngIf="confirmpassword.invalid && (confirmpassword.dirty || confirmpassword.touched)" class="text-danger">
+                <div *ngIf="confirmpassword.hasError('required')" class="text-danger">
+					Please confirm your password.
+				</div>
+                <div *ngIf="confirmpassword.value !== password && !confirmpassword.hasError('required')" class="text-danger">
+                    Passwords do not match.
+                </div>
+            </div>
+            
+        </div>
+        <button type="submit" class="btn btn-danger">Register</button>
+    </form>
+</div>

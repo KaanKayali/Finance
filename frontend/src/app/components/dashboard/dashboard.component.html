@@ -1,0 +1,74 @@
+<header>
+    <div>
+        <img src="https://glkb.ch/o/glkb-theme/images/logo.svg" height="75" alt="">
+    </div>
+    <div>
+        <button class="btn btn-danger" (click)="logout()">Logout {{ firstname }} {{ lastname }}</button>
+    </div>
+</header><br>
+<div class="container">
+    <div>
+        <h2>{{title}}</h2>
+        <form #payForm="ngForm" (ngSubmit)="Pay(payForm)" class="container-sm"> <!--onSubmit(userForm.value)-->
+            
+            <div class="form-group">
+                <label for="from">From:</label>
+                <input type="text" name="from" id="from" class="form-control" disabled="true" ngModel #from="ngModel" value="{{fromValue}}" [(ngModel)]="fromInput">
+                
+
+                <label for="to">To:</label>
+                <input type="number" name="to" id="to" class="form-control" required ngModel #to="ngModel" [(ngModel)]="toInput">
+                <div *ngIf="to.invalid && (to.dirty || to.touched)" class="text-danger">
+                  Target doesn't exist.
+                </div>
+                
+
+                <label for="amount">Amount[CHF]:</label>
+                <input type="number" name="amount" id="amount" class="form-control" min="0.05" required ngModel #amount="ngModel" [(ngModel)]="amountInput">
+                <div *ngIf="amount.invalid && (amount.dirty || amount.touched)" class="text-danger">
+                    <div *ngIf="amount.hasError('required')">
+                      Amount is required.
+                    </div>
+                    <div *ngIf="amount.hasError('min') && !amount.hasError('required')">
+                      Amount must be above 0.05.
+                    </div>
+                    <div *ngIf="!amount.hasError('required') && !amount.hasError('min')">
+                      Amount value invalid.
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-danger">Pay</button>
+        </form>
+    </div><br>
+    <div class="table-responsive">
+        <h2>Latest Transactions</h2>
+        <div class="container">
+            <button (click)="previousPage()" [disabled]="disablePrevButton" class="btn"><</button>
+            <button (click)="nextPage()" [disabled]="disableNextButton" class="btn">></button>
+        </div>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Target</th>
+                    <th>Amount</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let transaction of latestTransactions.slice(min, max)">
+                    <td>{{ transaction.from }}</td>
+                    <td>{{ transaction.target }}</td>
+                    <td>{{ transaction.amount }}</td>
+                    <td>{{ transaction.total }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,26 @@
+<header>
+    <div>
+        <img src="https://glkb.ch/o/glkb-theme/images/logo.svg" height="75" alt="">
+    </div>
+    <div>
+      <button routerLink="/register" class="btn btn-danger">Register</button>
+    </div>
+</header><br>
+<div class="container">
+    <h2>{{title}}</h2>
+    <form #userForm="ngForm" (ngSubmit)="Login(userForm)" class="container mt-5"> <!--onSubmit(userForm.value)-->
+        <div class="form-group">
+            <label for="username">User name:</label>
+            <input type="text" minlength="3" name="username" id="username" class="form-control" required ngModel #username="ngModel" placeholder="TheMikeShaker8783">
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+                Username must be at least 3 characters.
+            </div>
+            <label for="password">Password:</label>
+            <input type="password" minlength="3" name="password" id="password" class="form-control" required ngModel #password="ngModel">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                Password must be at least 3 characters.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-danger" [disabled]="userForm.invalid">Login</button>
+    </form>
+</div>
