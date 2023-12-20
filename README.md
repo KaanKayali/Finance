@@ -12,15 +12,18 @@ You need to install Angular version 16 for it to work. Its not safe to work if a
 ```
 npm install @angular/cli@16.2.8 --save-dev
 ```
+
 Search for the following code in package.json. It worked if its in.
 ```
   "devDependencies": {
    "@angular/cli": "^16.2.8",
  ```
+
 Paste and run this command inside the frontend and backend folder.
 ```
 npm i
 ```
+
 
 To now run this project, you should write the following code in both folders frontend and backend aswell.
 Both commands work.
