@@ -37,4 +37,5 @@ npx ng serve
 ```
 
 Honourable mention:
+Thanks to [Silvan Gehrig](https://github.com/sgeh) who made the backend.
 
